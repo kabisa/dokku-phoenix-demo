@@ -64,4 +64,10 @@ defmodule Demo.QuoteController do
     |> put_flash(:info, "Quote deleted successfully.")
     |> redirect(to: quote_path(conn, :index))
   end
+
+  def random(conn, _params) do
+    quote = Repo.one(from q in Demo.Quote, order_by: fragment("random()"), limit: 1)
+
+    text(conn, "#{quote.text} --#{quote.source}\n")
+  end
 end
