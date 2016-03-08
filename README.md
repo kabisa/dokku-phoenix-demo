@@ -13,8 +13,9 @@ To be deployed on [Dokku](https://github.com/dokku/dokku)
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
   * Start Phoenix endpoint with `mix phoenix.server`
+  * Get a random quotes with `curl localhost:4000`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Now you can manage quotes [`localhost:4000/quotes`](http://localhost:4000/quotes) from your browser.
 
 ## Learn more about Phoenix
 
