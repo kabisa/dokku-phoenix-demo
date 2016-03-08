@@ -1,0 +1,18 @@
+<h2>Show quote</h2>
+
+<ul>
+
+  <li>
+    <strong>Text:</strong>
+    <%= @quote.text %>
+  </li>
+
+  <li>
+    <strong>Source:</strong>
+    <%= @quote.source %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: quote_path(@conn, :edit, @quote) %>
+<%= link "Back", to: quote_path(@conn, :index) %>
